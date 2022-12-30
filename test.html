@@ -1,0 +1,119 @@
+<html>
+<head>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link type="text/css" rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+  <style>
+    body{
+      margin: 10px;
+      font-family: arial, sans-serif;
+    }
+    .panel{
+      padding: 5px;
+      margin-left: 10px;
+      height: 500px;
+    }
+    .form-group{
+      margin-top: 10px;
+    }
+    .main{
+      height: 500px;
+    }
+    .scrollable{
+      height: 400px;
+      overflow-y: scroll;
+      overflow-x: hidden;;
+    }
+
+    .panel-heading + div {
+      padding: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-center">FizzBuzz</h1>
+        <hr/>
+      </div>
+    </div>
+
+    <div class="row main">
+      <div class="col-md-4">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="text-center">Description</h3>
+          </div>
+          <div>
+            <p>
+              FizzBuzz is a counting game is which 3 numbers are chosen.<br>
+              2 of which are dividers and the last is the max number to count till.<br>
+              The game starts by counting from 1 to the max number to count till and everytime the counted number is dividable by the smallest divider
+              we display / say <mark>"Fizz"</mark> instead of the digit.<br>
+              We do the same with the greatest divider but then we say <mark>"Buzz"</mark> instead.<br>
+              If the current number is dividable by both dividers, we say / display <mark>"FizzBuzz"</mark>.
+            </p>
+            <p>
+              You can try this yourself in the form on the right.<br>
+              the results are updated as you change the value of the fields. If some values are missing
+              the default values for the dividers are 3 and 4 and 100 for the max count.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-sm panel-info">
+          <div class="panel-heading">
+            <h3 class="text-center">Try it!</h3>
+          </div>
+          <div>
+          <div class="form-group">
+
+            <label>Count Till</label>
+            <input autofocus="true" class="form-control"  type="number" min="10" name="countTill" id="countTill" oninput="FizzBuzzAdvanced()"/><br>
+
+            <label>First divider</label>
+            <input class="form-control" type="number" min="1"  name="first" id="first" oninput="FizzBuzzAdvanced()"/><br>
+
+            <label>Second divider</label>
+            <input class="form-control" type="number" min="1"  name="second" id="second" oninput="FizzBuzzAdvanced()"/>
+            <hr/>
+            <button class="btn btn-primary btn-lg" onclick="FizzBuzzAdvanced()">Quick Run</button>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-info ">
+          <div class="panel-heading">
+            <h3 class="text-center">Result</h3>
+          </div>
+          <div class=" scrollable">
+            <ul id="list" class="list-group">
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr/>
+    <footer>
+      <p>Copyright &copy; Eddy Ntambwe</p>
+    </footer>
+  </dv>
+  <script>
+  </script>
+</body>
+</html>
